@@ -1,0 +1,34 @@
+@use '../variables' as *;
+
+.content {
+  text-transform: uppercase;
+
+  &__header {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 80px;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 120px;
+    }
+  }
+
+  &__description {
+    font-size: 28px;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+  }
+}

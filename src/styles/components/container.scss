@@ -1,0 +1,15 @@
+@use '../variables' as *;
+
+.container {
+  padding: 20px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 40px;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}

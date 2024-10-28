@@ -1,0 +1,51 @@
+@use '../variables' as *;
+
+.opening {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  opacity: 0;
+
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 50px;
+  }
+
+  &__roll {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+  }
+
+  &__roll-item {
+    $size: 20px;
+    $size-md: 40px;
+
+    width: $size;
+    height: $size-md;
+
+    @media screen and (min-width: $breakpoint-md) {
+      width: $size-md;
+      height: $size-md;
+    }
+
+    & > * {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: $size-md;
+
+      @media screen and (min-width: $breakpoint-md) {
+        line-height: $size-md;
+      }
+    }
+  }
+
+  &__plus {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/src/img/plus.svg');
+  }
+}

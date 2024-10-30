@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import anime from 'animejs/lib/anime.es.js';
 
 export default () => {
   const sceneEl = document.getElementById('scene');
@@ -65,6 +66,12 @@ export default () => {
     renderer.render(scene, camera);
   }
   animate();
+
+  anime({
+    targets: sceneEl,
+    opacity: 1,
+    duration: 5000
+  })
 
   // Обработчик изменения размера окна
   window.addEventListener('resize', () => {

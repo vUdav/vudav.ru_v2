@@ -1,5 +1,7 @@
 import opening from './opening'
 import scene from './scene'
 
-opening()
-scene()
+(async function () {
+  await opening()
+  scene()
+})()
